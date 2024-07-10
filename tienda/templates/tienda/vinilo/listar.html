@@ -1,0 +1,36 @@
+{% extends 'tienda/base.html' %}
+{% block contenido %}
+{%load static%}
+<div class="row">
+    <div class="d-flex justify-content-center align-items-center text-center">
+        <div class="table-hover table-responsive mt-5">
+            <table class="table table-striped table-secundary">
+                <tr>
+                    <th>Autor</th>
+                    <th>Nombre</th>
+                    <th>Genero</th>
+                    <th>Valor</th>
+                    <th>Portada</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                {%for p in vinilos%}
+                <tr>
+                    <td>{{p.autor}}</td>
+                    <td>{{p.nombre}}</td>
+                    <td>{{p.Categoria_id}}</td>
+                    <td>{{p.valor}}</td>
+                    <td><img class="w-25" src="{{p.portada.url}}" alt="imagen_vinilo"></td>
+                    <td><a class="btn btn-warning" href="{% url 'modificar_producto' p.id %}">Modificar</a></td>
+                    <td><a class="btn btn-danger"  href="{% url 'eliminar_producto' p.id %}">Eliminar</a></td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+{%endblock%}

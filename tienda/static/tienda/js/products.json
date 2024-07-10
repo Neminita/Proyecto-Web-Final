@@ -1,0 +1,103 @@
+
+[
+    {
+        "price": 38500,
+        "id": 1,
+        "name": "Red Hot Chilli Peppers - Unlimited Love",
+        "image": "Imagenes/Productos/Unlimited love.jpg"
+    },
+
+    {
+        "price": 35000,
+        "id": 2,
+        "name": "Red Hot Chilli Peppers - Californication",
+        "image": "Imagenes/Productos/Californication.jpg"
+    },
+
+    {
+       "price": 45000,
+        "id": 3,
+        "name": "The Beatles - The White Album",
+        "image": "Imagenes/Productos/TheBeatles68LP.jpg"
+    },
+
+    {
+        "price": 22500,
+        "id": 4,
+        "name": "Deep Purple / Machine Head",
+        "image": "Imagenes/Productos/machine-head-deep-purple-portada.jpg"
+    },
+
+    {
+        "price": 15000,
+        "id": 5,
+        "name": "Rod Stewart – Blondes Have More Fun",
+        "image": "Imagenes/Productos/Rod Stewart.jpg"
+    },
+
+    {
+        "price": 30000,
+        "id": 6,
+        "name": "Twisted Sister – Stay Hungry",
+        "image": "Imagenes/Productos/Twisted Siter.jpg"
+    },
+
+    {
+        "price": 20000,
+        "id": 7,
+        "name": "Louis Armstrong - The Planitum Collection",
+        "image": "Imagenes/Productos/the platinum.jpg"
+    },
+
+    {
+        "price": 30000,
+        "id": 8,
+        "name": "Louis Armstrong - Singin' Satchmo",
+        "image": "Imagenes/Productos/Louis.jpg"
+    },
+
+    {
+        "price": 38000,
+        "id": 9,
+        "name": "Miles Davis - Kind Of Blue",
+        "image": "Imagenes/Productos/d2.jpg"
+    },
+
+
+    {
+        "price": 50000,
+        "id": 10,
+        "name": "Frank Sinatra - Collected 2",
+        "image": "Imagenes/Productos/FrankSinatra.png"
+    },
+    {
+        "price": 25000,
+        "id": 11,
+        "name": "Miles Davis – A Tribute To Jack Johnson",
+        "image": "Imagenes/Productos/Miles.jpg"
+    },
+    {
+        "price": 40000,
+        "id": 12,
+        "name": "Vivaldi - The Fourth Seasons",
+        "image": "Imagenes/Productos/thefourthseasons.jpg"
+    },
+    {
+        "price": 14000,
+        "id": 13,
+        "name": "Tiana Lemnitz - The Art Of Tiana Lemnitz Box",
+        "image": "Imagenes/Productos/classic2.png"
+    },
+    {
+        "price": 20000,
+        "id": 14,
+        "name": "Vivaldi, Veracini, Haendel, Bach, Severino Gazzelloni, Bruno Canino - La Flauta En El Barroco Italiano Y Alemán",
+        "image": "Imagenes/Productos/classic3.jpg"
+    },
+    {
+        "price": 30000,
+        "id": 15,
+        "name": "Mozart, Orchestre De Chambre Ramat-Gan* Direction Eliahu Inbal - Trois Divertimenti Pour Orchestre A Cordes",
+        "image": "Imagenes/Productos/classic4.jpg"
+    }
+]

@@ -1,0 +1,58 @@
+{% extends 'tienda/base.html' %}
+{% block contenido %}
+{%load static%}
+
+
+      <br>      
+      <br>
+
+    <section id="cartas">
+
+      <div class="row row-cols-1 row-cols-md-2 g-4 text-center">
+        {% for p in vinilos%}
+         {% if p.Categoria.id == 1 %}
+
+          <div class="col-sm-4 col-md-10 mt-5 text-center">
+
+            <div class="card mb-3 col-md-10">
+              {% if p.portada%}
+              <img src="{{p.portada.url}}" class="card-img-top" alt="...">
+              {% endif%}
+              <div class="card-body">
+                <h5 class="card-title fw-semibold ms-3 fs-5 text-black col-md-10">{{p.autor}}</h5>
+                <p class="card-text">{{p.nombre}}</p>
+                <p class="card-text">${{p.valor}}</p>
+                <button type="button" class="BOTON-CARD" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Añadir Al Carro
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Desea añadir al carro?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Desea añadir el producto al carro de compras, podrá añadir o eliminar del carrito el producto cuando desee.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button class="BOTON-CARD">AÑADIR</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+       {%endif%} 
+      {% endfor %} 
+      </div> 
+    </section>
+    <br>
+{%endblock%}  

@@ -1,0 +1,63 @@
+{% extends 'tienda/base.html' %}
+{% block contenido %}
+{%load static%}
+
+
+<section id="inicio-sesion">
+  <div class="wrapper">
+      <form action="" method="POST" id="form">
+          {% csrf_token %} 
+            <h1>Registro</h1>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Región</label>
+              <select id="inputState" class="form-select">
+                <option selected>Elija una región</option>
+                <option>Región de Arica y Parinacota</option>
+                <option>Región de Tarapacá</option>
+                <option>Región de Antofagasta</option>
+                <option>Región de Atacama</option>
+                <option>Región de Coquimbo</option>
+                <option>Región de Valparaíso</option>
+                <option>Región Metropolitana</option>
+                <option>Región de O’Higgins</option>
+                <option>Región del Maule</option>
+                <option>Región del Ñuble</option>
+                <option>Región del Biobío</option>
+                <option>Región de La Araucanía</option>
+                <option>Región de Los Ríos</option>
+                <option>Región de Los Lagos</option>
+                <option>Región de Aysén</option>
+                <option>Región de Magallanes</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <input type="text" name="" id="ciudad" placeholder="Ciudad" >
+              <i class='bx bxs-user'></i>
+          </div>
+            <div class="input-box">
+                <input type="text" name="" id="name" placeholder="Nombre Usuario" >
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+              <input type="email" name="" id="email" placeholder="Correo" >
+              <i class='bx bxs-lock' ></i>
+          </div>
+          <div class="input-box">
+            <input type="password" name="" id="password" placeholder="Contraseña" >
+            <i class='bx bxs-lock' ></i>
+          </div>
+            <div class="remember-forgot">
+                <label ><input type="checkbox">Acepto términos y condiciones.</label>
+            </div>
+
+            <button type="submit" class="btn">Registrarse</button>
+            <p class="warnings" id="warnings"></p>
+            <div class="register-link">
+                <p>Ya Posee Cuenta? <a href="{%url 'Iniciosesion'%}">Ingresar</a></p>
+            </div>
+        </form>
+    </div>
+</section>    
+
+{%endblock%}

@@ -1,0 +1,36 @@
+{% extends 'tienda/base.html' %}
+{% block contenido %}
+{%load static%}
+    
+
+    <section id="Contacto">
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+
+      <h3 class="texto">Si desea comunicarse con nosotros ingrese su correo y el asunto correspondiente</h3>
+      <br>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="text">Nosotros nos contactaremos con usted lo antes posible. ¡Gracias por confiar en nosotros!</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Asunto</label>
+         
+        </div>
+        <div class="mb-3 form-check">
+          
+          <textarea class="mb-3 form-control" rows="4" id="comment" name="text"></textarea>
+        </div>
+        <button type="submit" class="BOTON-CARD">Enviar</button>
+      </form>
+    </section>  
+      
+      <br>
+{%endblock%}
+  

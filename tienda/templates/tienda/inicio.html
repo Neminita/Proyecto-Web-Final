@@ -1,0 +1,116 @@
+{% extends 'tienda/base.html' %}
+{% block contenido %}
+{%load static%}
+
+  <br>
+  <h1 class="encabezado1">Explora nuestras categorías</h1>
+  <br>
+
+  <!-- CARRUSEL -->
+  
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="Rock">
+          <img src="{% static 'tienda/Imagenes/Concierto.jpg'%}" class="d-block w-100" alt="rock">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="Jazz">
+          <img src="{% static 'tienda/Imagenes/JAZZ.jpg'%}" class="d-block w-100" alt="jazz">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="Clasica">
+          <img src="{% static 'tienda/Imagenes/PIANO.jpg'%}" class="d-block w-100" alt="clasica">
+        </a>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- CARRUSEL -->
+
+  <br>
+  <br>
+
+  <p>
+    <span class="destaque-color">Descubre la magia de la música</span> en su forma más pura. Sumérgete en nuestra
+    colección de vinilos cuidadosamente
+    seleccionados, donde cada surco cuenta una historia. Encuentra tus clásicos favoritos, descubre joyas ocultas y crea
+    momentos inolvidables con la calidad incomparable del sonido analógico.
+  </p>
+
+  <br>
+  <h1 class="encabezado1">Ofertas del día</h1>
+  <br>
+
+  <div class="card-group">
+    <div class="card">
+      <a href="Jazz">
+        <img src="{% static 'tienda/Imagenes/Productos/The platinum.jpg'%}" class="card-img-top" alt="...">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Louis Armstrong</h5>
+        <p class="card-text">The Planitum Collection</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Sólo disponible en 24 hrs</small>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Rock">
+        <img src="{% static 'tienda/Imagenes/Productos/Unlimited love.jpg'%}" class="card-img-top" alt="...">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Red Hot Chilli Peppers</h5>
+        <p class="card-text">Unlimited Love</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Sólo disponible en 12 hrs</small>
+      </div>
+    </div>
+    <div class="card">
+      <a href="Rock">
+        <img src="{% static 'tienda/Imagenes/Productos/Californication.jpg'%}" class="card-img-top" alt="...">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Red Hot Chilli Peppers</h5>
+        <p class="card-text">Californication</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Sólo disponible en 20 hrs</small>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+
+  <div class="card">
+    <div class="card-header">
+      Reseñas destacadas
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>La mejor página para encontrar vinilos de calidad.</p>
+        <footer class="blockquote-footer">Viña del Mar, <cite title="Source Title">Javiera Rocio Gonzales Tapia</cite></footer>
+      </blockquote>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>El envío asegura seguridad y confianza ante todo.</p>
+        <footer class="blockquote-footer">Santiago, <cite title="Source Title">Roberto Hurtado Cisterna Jorquera</cite></footer>
+      </blockquote>
+    </div>
+    <h5>ME LA PELA</h5>
+  </div>
+{%endblock%}
