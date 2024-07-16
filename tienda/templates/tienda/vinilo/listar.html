@@ -39,7 +39,7 @@
                     <th></th>
                     <th></th>
                 </tr>
-                {%for p in vinilos%}
+                {%for p in entity%}
                 <tr>
                     <td>{{p.autor}}</td>
                     <td>{{p.nombre}}</td>
@@ -53,6 +53,10 @@
                 {%endfor%}
 
             </table>
+            <hr>
+            <div>
+                {% include 'tienda/paginator.html' %}
+            </div>
         </div>
 
     </div>
