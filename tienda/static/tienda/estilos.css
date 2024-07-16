@@ -508,13 +508,14 @@ form{
     align-items: center;
 
 }
-.BOTON {
 
-    color: #543476;
-}
 
 .carousel-inner {
 
     width: 1000px;
     height: 500px;
+}
+
+.producto-admin{
+    align-items: center;
 }
