@@ -4,6 +4,7 @@ from .models import Jazz
 from .models import Clasica
 from .models import Rock
 from .forms import ViniloForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -49,7 +50,7 @@ def agregar_producto(request):
         formulario = ViniloForm(data=request.POST, files=request.FILES) 
         if formulario.is_valid():
             formulario.save()
-            data["mensaje"] = "Guardado Correctamente"
+            messages.success(request, "Agregado Correctamente")
         else:
             data["form"] = formulario
     return render(request, 'tienda/vinilo/agregar.html', data)
@@ -67,11 +68,12 @@ def modificar_producto(request, id):
         formulario = ViniloForm(data=request.POST, instance= vinilos, files=request.FILES) 
         if formulario.is_valid():
                 formulario.save()
-                data["mensaje"] = "Modificado Correctamente"
+                messages.success(request, "Modificado Correctamente")
                 return redirect(to="listar_producto")    
     return render(request, 'tienda/vinilo/modificar.html', data)
 
 def eliminar_producto(request, id):
     vinilos=get_object_or_404(Vinilo, id=id)
     vinilos.delete()
+    messages.success(request, "Eliminado Correctamente")
     return redirect(to="listar_producto")

@@ -3,12 +3,17 @@
 {%load static%}
 <br>
 <br>
-<section id="producto-admin">
-    <a class="btn btn-warning col-4" href="{% url 'agregar_producto' %}" >Agregar Producto</a>
+<div class="card mb-3 col-md-10">
+    <h1>Administración</h1>
     <br>
     <br>
-    <a class="btn btn-warning col-4" href="{% url 'listar_producto' %}" >Listar Producto</a>
-</section>
+    <br>
+    <a class="BOTON-CARD" href="{% url 'agregar_producto' %}" >Agregar Producto</a>
+    <br>
+    <br>
+    <a class="BOTON-CARD" href="{% url 'listar_producto' %}" >Listar Producto</a>
+    <br>
+</div>
 <br>
 <br>
 

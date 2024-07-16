@@ -81,6 +81,7 @@ button:hover{
     padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 5);
+    align-items: center;
 }
 
 .logo {
@@ -514,8 +515,4 @@ form{
 
     width: 1000px;
     height: 500px;
-}
-
-.producto-admin{
-    align-items: center;
 }
