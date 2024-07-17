@@ -44,9 +44,24 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'Contacto' %}">Contacto</a>
             </li>
+
+            {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'Iniciosesion' %}">Inicio Sesión/Registro</a>
+              <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">{{ user.username }}</a>
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+              <a  class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            {% endif %}
+            
             <li class="nav-item">
               <div class="carro">
                 <a href="{% url 'Carrito' %}" class="nav-link"><img src="{% static 'tienda/Imagenes/CARRITO.png'%}" alt="carrito"><span id="cuenta-carrito">0</span> </a>
