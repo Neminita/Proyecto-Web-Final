@@ -45,9 +45,24 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'Contacto' %}">Contacto</a>
             </li>
+
+            {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'Iniciosesion' %}">Inicio Sesión/Registro</a>
+              <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">{{ user.username }}</a>
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+              <a  class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            {% endif %}
+            
             <li class="nav-item">
               <div class="carro">
                 <a href="{% url 'Carrito' %}" class="nav-link"><img src="{% static 'tienda/Imagenes/CARRITO.png'%}" alt="carrito"><span id="cuenta-carrito">0</span> </a>
@@ -63,6 +78,7 @@
  <br>
  <br>
  <br>
+
 
  {% block contenido%}
  {% endblock %}
@@ -133,6 +149,22 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="{% static 'tienda/bootstrap/js/bootstrap.min.js'%}"></script>
   <script src="{% static 'tienda/JavaScript/javascript.js'%}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  {% if messages %}
+    {% for m in messages %}
+        <script>
+            Swal.fire({
+                "title": "Felicitaciones",
+                "text": "{{m}}",
+                "icon": "success"
+            })
+        </script>
+    {% endfor %}
+  {% endif%}
+  {% block js %}
+  {% endblock %}
+
 </body>
 
 </html>

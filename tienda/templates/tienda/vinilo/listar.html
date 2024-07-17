@@ -1,5 +1,30 @@
 {% extends 'tienda/base.html' %}
 {% block contenido %}
+{% block js %}
+
+    <script>
+        function eliminarProducto(id) {
+            Swal.fire({
+                "title":"¿Estás seguro?",
+                "text": "Esta acción no se podrá deshacer",
+                "icon": "question",
+                "showCancelButton":true,
+                "cancelButtonText": "No, cancelar",
+                "confirmButtonText": "Si, eliminar",
+                "reverseButtons":true,
+                "confirmButtonColor":"purple"
+
+            })
+            .then(function(result) {
+                if(result.isConfirmed){
+                    window.location.href = "/eliminar-producto/"+id+"/"
+                }
+            })
+        }
+    </script>
+
+{% endblock %}
+
 {%load static%}
 <div class="row">
     <div class="d-flex justify-content-center align-items-center text-center">
@@ -14,7 +39,7 @@
                     <th></th>
                     <th></th>
                 </tr>
-                {%for p in vinilos%}
+                {%for p in entity%}
                 <tr>
                     <td>{{p.autor}}</td>
                     <td>{{p.nombre}}</td>
@@ -22,10 +47,16 @@
                     <td>{{p.valor}}</td>
                     <td><img class="w-25" src="{{p.portada.url}}" alt="imagen_vinilo"></td>
                     <td><a class="btn btn-warning" href="{% url 'modificar_producto' p.id %}">Modificar</a></td>
-                    <td><a class="btn btn-danger"  href="{% url 'eliminar_producto' p.id %}">Eliminar</a></td>
+                    <td><a class="btn btn-danger"  href="#" onclick="eliminarProducto({{ p.id}})">Eliminar</a></td>
                 </tr>
+
                 {%endfor%}
+
             </table>
+            <hr>
+            <div>
+                {% include 'tienda/paginator.html' %}
+            </div>
         </div>
 
     </div>
