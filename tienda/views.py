@@ -3,10 +3,14 @@ from .models import Vinilo
 from .models import Jazz
 from .models import Clasica
 from .models import Rock
-from .forms import ViniloForm
+from .forms import ViniloForm, CustomUserCreationForm
 from django.contrib import messages
+from django.contrib.auth import logout, authenticate, login
+
 from django.core.paginator import Paginator
 from django.http import Http404
+from django.urls import reverse_lazy
+
 
 
 # Create your views here.
@@ -91,3 +95,20 @@ def eliminar_producto(request, id):
     vinilos.delete()
     messages.success(request, "Eliminado Correctamente")
     return redirect(to="listar_producto")
+
+def ingresar(request):
+    return render(request, 'registration/login.html' )
+def registro(request):
+    data = {
+        'form':CustomUserCreationForm()
+    }
+    if request.method == 'POST':
+        formulario = CustomUserCreationForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            user = authenticate(username=formulario.cleaned_data['username'], password = formulario.cleaned_data['password1'])
+            login(request,user)
+            messages.success(request, "Registrado Correctamente")
+            return redirect(to='inicio')
+        data['form'] = formulario
+    return render(request, 'registration/registro.html', data )

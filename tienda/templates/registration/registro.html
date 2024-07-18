@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ingreso</title>
+    <title>Registro</title>
 </head>
 <body>
     
@@ -16,22 +16,19 @@
         <div class="wrapper">
             <form action="" method="post">
 
-                <h1>Iniciar Sesión</h1>
+                <h1>Registro de Usuario</h1>
                 <div class="input-box">
                     {% csrf_token %}
                     {{ form }}
                 </div>
-                <br><br><br><br><br><br><br><br><br><br>
-                <div class="remember-forgot">
-                    <label ><input type="checkbox">Recordar Usuario</label>
-                    <a href="">¿Olvidó la Contraseña?</a>
-                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                
 
-                <button type="submit" class="btn">Ingresar</button>
+                <button type="submit" class="btn">Registrar</button>
                 <p class="warnings" id="warnings"></p>
 
                 <div class="register-link">
-                    <p>No tiene Cuenta? <a href="{% url 'registro' %}">Registrarse</a></p>
+                    <p>Tienes una Cuenta? <a href="{% url 'Iniciosesion' %}">Iniciar Sesion</a></p>
                 </div>
             </form>
         </div>
@@ -39,6 +36,6 @@
 
 </body>
 </html>
-      
-    
+
+
 {%endblock%}
