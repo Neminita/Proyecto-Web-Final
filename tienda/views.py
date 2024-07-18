@@ -30,7 +30,7 @@ def contacto(request):
     return render(request, 'tienda/vContacto.html')
 
 def inisesion(request):
-    return render(request, 'tienda/vInicioSesion.html')
+    return render(request, 'registration/login.html')
 
 def jazz(request):
 
@@ -43,7 +43,7 @@ def nosotros(request):
     return render(request, 'tienda/vNosotros.html')
     
 def registro(request):
-    return render(request, 'tienda/vRegistro.html')
+    return render(request, 'registration/registro.html')
 
 def rock(request):
     vinilos = Vinilo.objects.all()

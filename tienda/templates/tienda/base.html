@@ -48,7 +48,10 @@
 
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="nav-link btn btn-link" >Cerrar Sesión</button>
+            </form>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">{{ user.username }}</a>
@@ -73,18 +76,12 @@
       </div>
     </nav>
   </header>
- <br>
- <br>
- <br>
- <br>
- <br>
+ 
 
 
  {% block contenido%}
  {% endblock %}
 
- <br>
- <br>
 
 
   
