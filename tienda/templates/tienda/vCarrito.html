@@ -3,7 +3,8 @@
 {%load static%}
 <br>
 <br>
-<div class="card mb-3 col-md-10">
+{% if user.is_staff %}
+<div class="card mb-3 col-md-10">    
     <h1>Administración</h1>
     <br>
     <br>
@@ -14,7 +15,8 @@
     <a class="BOTON-CARD" href="{% url 'listar_producto' %}" >Listar Producto</a>
     <br>
 </div>
+{% else %}
+{% endif %}
 <br>
 <br>
-
 {%endblock%}

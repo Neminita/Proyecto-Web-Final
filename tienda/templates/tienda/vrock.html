@@ -21,8 +21,9 @@
               <div class="card-body">
                 <h5 class="card-title fw-semibold ms-3 fs-5 text-black col-md-10">{{p.autor}}</h5>
                 <p class="card-text">{{p.nombre}}</p>
-                <p class="card-text">${{p.valor}}</p>
-                <button type="button" class="BOTON-CARD" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <p class="card-text">{{p.valor}}</p>
+                <button type="button" class="BOTON-CARD" data-bs-toggle="modal" \
+                  data-bs-target="#exampleModal" >
                   Añadir Al Carro
                 </button>
                 
@@ -39,7 +40,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button class="BOTON-CARD">AÑADIR</button>
+                        <button class="update-cart" data-product="{{product.id}}" data-action="add " onclick="add({{ p.id}})"">AÑADIR</button>
                       </div>
                     </div>
                   </div>
