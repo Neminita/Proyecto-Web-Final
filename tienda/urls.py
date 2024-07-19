@@ -18,5 +18,6 @@ urlpatterns = [
     path('listar-producto', views.listar_producto, name = 'listar_producto'),
     path('modificar-producto/<id>/', views.modificar_producto, name = 'modificar_producto'),
     path('eliminar-producto/<id>/', views.eliminar_producto, name = 'eliminar_producto'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'), 
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('Administracion/',views.administracion, name='Administracion')
 ]

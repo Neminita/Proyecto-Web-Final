@@ -45,6 +45,9 @@ def nosotros(request):
 def registro(request):
     return render(request, 'registration/registro.html')
 
+def administracion(request):
+    return render(request, 'tienda/Administracion.html')
+
 def rock(request):
     vinilos = Vinilo.objects.all()
     data = {"vinilos" : vinilos}
